@@ -8,8 +8,26 @@
 <script>
 
 import FooterGuide from './components/FooterGuide/FooterGuide'
+import {mapActions} from 'vuex'
+// import {reqAddress} from './api'
+// import {reqFoodCategorys} from './api'
+// import {reqShops} from './api'
 
 export default {
+
+  // async mounted(){
+  //   const result = await reqShops()
+  //   console.log(result)
+  // },
+  mounted(){
+    // this.$store.dispatch('getAddress')
+    // this.$store.dispatch('getCategorys')
+    // this.$store.dispatch('getShops')
+    this.getAddress()
+  },
+  methods:{
+    ...mapActions(['getAddress'])
+  },
   components:{
     FooterGuide
   }
